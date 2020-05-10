@@ -1,76 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Superheros!</title>
-  </head>
-  <style>
-  body {
-    background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/838501/910/607/m1/fpnw/wm0/superman-iv-cm-.jpg?1449662590&s=7636aa6057cfe23ec85faeae9a4c721d);
-  }
+<h1>Welcome to the Super Hero Team Creator</h1>
+<h2>Create a Team and Heroes!</h2>
 
-  h1 {
-    text-align: center;
-    color: blue;
-    font-size: 40px;
-  }
+<form action="/teams" method="post">
+  <h3>Any Super Hero Team needs a cool name and motto!</h3>
+  <p>Team Name: <input id="team[name]" type="text" name="team[name]"/></p>
+  <p>Team Motto: <input id="team[motto]" type="text" name="team[motto]"/></p>
 
-  p.tag1 {
-    text-align: center;
-    font-size: 25px;
-  }
-  h2{
-    text-align: center;
-    color: red;
-    font-size: 30px;
-  }
-
-  p.tag2 {
-    text-align: center;
-    font-size: 20px;
-    color: purple;
-  }
-
-  p.tag3 {
-    text-align: center;
-    font-size: 40px;
-    color: purple;
-  }
-  </style>
-  <body>
-    <h1>Create a Team and Heroes!</h1>
-    <p class=tag1 <form method="POST" action="/team">
-      <label for="phrase">Team Name:</label>
-      <input type="text" id="phrase" name='team'>
-      <label for="phrase">Team Motto:</label>
-      <input type="text" id="phrase" name='team'></p>
-      <!-- <input type="submit"> -->
-
-      <h2>Hero 1</h2>
-      <p class=tag2> <label for="member1_name">Hero's Name: </label>
-      <input type="text" name="team[members][][name]" id="member1_name"><br>
-      <label for="member1_power">Hero's Power: </label>
-      <input type="text" name="team[members][][power]" id="member1_power"><br>
-      <label for="member1_bio">Hero's Biography:   </label>
-      <input type="text" name="team[members][][bio]" id="member1_bio"></p>
-
-      <h2>Hero 2</h2>
-      <p class=tag2> <label for="member2_name">Hero's Name: </label>
-      <input type="text" name="team[members][][name]" id="member2_name"><br>
-      <label for="member2_power">Hero's Power: </label>
-      <input type="text" name="team[members][][power]" id="member2_power"><br>
-      <label for="member2_bio">Hero's Biography: </label>
-      <input type="text" name="team[members][][bio]" id="member2_bio"><br></p>
-
-      <h2>Hero 3</h2>
-      <p class=tag2> <label for="member3_name">Hero's Name: </label>
-      <input type="text" name="team[members][][name]" id="member3_name"><br>
-      <label for="member3_power">Hero's Power: </label>
-      <input type="text" name="team[members][][power]" id="member3_power"><br>
-      <label for="member3_bio">Hero's Biography: </label>
-      <input type="text" name="team[members][][bio]" id="member3_bio"><br><br></p>
-
-      <input type="submit">
-    </form>
-  </body>
-</html>
+  <h3>Any decent Super Hero Team needs at least three members!</h3>
+  <h4>Hero 1:</h4>
+  <p>Hero Name: <input id="member1_name" type="text" name="team[heroes][][name]"/></p>
+  <p>Hero Power: <input id="member1_power" type="text" name="team[heroes][][power]"/></p>
+  <p>Hero Biography: <input id="member1_bio" type="text" name="team[heroes][][bio]"/></p>
+  <h4>Hero 2:</h4>
+  <p>Hero Name: <input id="member2_name" type="text" name="team[heroes][][name]"/></p>
+  <p>Hero Power: <input id="member2_power" type="text" name="team[heroes][][power]"/></p>
+  <p>Hero Biography: <input id="member2_bio" type="text" name="team[heroes][][bio]"/></p>
+  <h4>Hero 3:</h4>
+  <p>Hero Name: <input id="member3_name" type="text" name="team[heroes][][name]"/></p>
+  <p>Hero Power: <input id="member3_power" type="text" name="team[heroes][][power]"/></p>
+  <p>Hero Biography: <input id="member3_bio" type="text" name="team[heroes][][bio]"/></p>
+  <input type="submit" name="submit" id="submit">
+</form>
