@@ -10,14 +10,12 @@ class App < Sinatra::Base
 
     post '/teams' do
       @team = Team.new(params[:team])
-      params[:team][:heroes].each{|args| Hero.new(args)}
-      end
-
+      params[:team][:heroes].each {|args| Hero.new(args)}
       @heroes = Hero.all
 
       erb :team
     end
-  end
+end
 
     # post '/teams' do
     #   @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
