@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>SuperHero!</title>
-  </head>
-  <body>
-    <h1><%= @team.name %></h1>
-    <h2>Team Motto: <%=@team.motto %></h2><br>
-    <% @heroes.each do |member| %>
+<h1><%= @team.name %></h1>
+<h2>Team Motto: <%= @team.motto %> </h2>
 
-      <h2>Hero Name: <%= @hero.name %></h2>
-      <h3>Hero power: <%= @hero.power %></h3>
-      <h3>Hero biography: <%= @hero.bio %></h3>
-    <% end %>
-  </body>
-</html>
+<% @heroes.each do |super_hero| %>
+  <h2>Hero Name: <%= super_hero.name %> </h2>
+  <p>Hero Power: <%= super_hero.power %> </p>
+  <p>Hero Biography: <%= super_hero.bio %> </p>
+<% end %>
