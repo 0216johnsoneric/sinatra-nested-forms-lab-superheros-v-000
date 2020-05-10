@@ -22,5 +22,3 @@ end
     #   params[:team][:heroes].each {|hero| Superhero.new(hero)}
     #   @heroes=Superhero.all
     # end
-
-end
