@@ -9,7 +9,7 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      members = params
+      members = params[:team][:members]
     end
 
     # post '/teams' do
